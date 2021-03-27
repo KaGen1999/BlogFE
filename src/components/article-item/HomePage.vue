@@ -14,7 +14,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
       <li class="article-item">
@@ -30,7 +30,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
       <li class="article-item">
@@ -46,7 +46,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
       <li class="article-item">
@@ -62,7 +62,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
       <li class="article-item">
@@ -78,7 +78,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
       <li class="article-item" @click="jump">
@@ -94,7 +94,7 @@
         </div>
         <div class="cover">
           <img
-            src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg">
+            :src="cover">
         </div>
       </li>
     </ul>
@@ -107,10 +107,11 @@ export default {
   name: "HomePage",
   data() {
     return {
-      'title': '这是文章标题',
-      'summary': '往事，我这个人比较喜欢念旧吧，人事物。不知不觉，2019年马上就要过去了。',
-      'articleCategory': '乱七八糟',
-      'articleDate': '2021-01-12'
+      title: '这是文章标题',
+      summary: '往事，我这个人比较喜欢念旧吧，人事物。不知不觉，2019年马上就要过去了。',
+      articleCategory: '乱七八糟',
+      articleDate: '2021-01-12',
+      cover: require('../../../static/test2.jpg'),
     }
   },
   methods: {

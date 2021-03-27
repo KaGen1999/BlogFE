@@ -4,7 +4,7 @@
       <!--头像-->
       <div class="menu_head">
         <div class="avatar">
-          <img src="https://www.clingclang.cn/wp-content/uploads/2020/12/head.jpg">
+          <img :src="avatar">
         </div>
       </div>
       <!--标题及描述-->
@@ -64,6 +64,7 @@ import '@/icon/iconfont.css'
     name: "Menu",
     data(){
       return{
+        avatar: require('../../static/avatar.jpg'),
         screenWidth: document.body.clientWidth,
         grid_width:0,
         search_kw:'',
