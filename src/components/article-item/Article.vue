@@ -68,7 +68,7 @@ export default {
   data(){
     return{
       showViewer:false,
-      donateUrl:'http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/tx.png',
+      donateUrl:require('../../../static/wechat.jpg'),
       qqShareUrl:'',
       wxShareImg:null,
       mdData:'//将下面的文字复制粘贴到你的有道云笔记Markdown编辑器/简书Markdown编辑器即可在预览中重现上文。\n' +
