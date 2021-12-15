@@ -22,15 +22,16 @@
       :ishljs="true"
     />
     <div class="statement">
-      <span>本作品原创，遵循</span>
-      <a
-        target="_blank"
-        href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-      >
-        《署名-非商业性使用-禁止演绎 4.0 国际》
-      </a>
-
-      <span>欢迎转载</span>
+      <div class="statement-tips">
+        <span>本作品原创，遵循</span>
+        <a
+          target="_blank"
+          href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        >
+          《署名-非商业性使用-禁止演绎 4.0 国际》
+        </a>
+        <span>转载需注明出处</span>
+      </div>
     </div>
     <!--赞助作者栏-->
     <div class="donate">
@@ -226,9 +227,12 @@ export default {
 }
 
 .statement{
-  font-size: .6rem;
-  margin: 1vh 0 1vh 0;
-  color: rgb(92, 91, 91);
+  font-size: .1rem;
+  margin: 2vh 0 2vh 0;
+  color: rgb(190, 190, 190) !important;
+}
+.statement a{
+  color: rgb(190, 190, 190) !important;
 }
 
 .el-popover {
