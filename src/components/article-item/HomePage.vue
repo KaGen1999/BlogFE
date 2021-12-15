@@ -4,12 +4,12 @@
       <li class="article-item" v-for="(item, index) in posts" :key="index">
         <div class="summary">
           <div class="summary-detail">
-            <h2 @click="jump">{{ item.title }}</h2>
+            <h2 @click="jump(item.url)">{{ item.title }}</h2>
             <p>{{ item.desc }}</p>
           </div>
           <div class="summary-info">
             <a class="label">{{ item.catalog }}</a>
-            <time>{{ item.modify_time }}</time>
+            <time>{{ item.modify_time | formatDate }}</time>
           </div>
         </div>
         <div class="cover">
@@ -24,7 +24,13 @@
 import { getPosts } from '@/api/article'
 export default {
   name: 'HomePage',
+  filters:{
+    formatDate(modify_time){
+      return modify_time.split(' ')[0]
+    }
+  },
   created() {
+    console.log(process.env)
     this.getArticles()
   },
   data() {
@@ -46,8 +52,9 @@ export default {
         console.log(this.posts)
       })
     },
-    jump() {
-      this.$router.push({ path: '/article/123' })
+    jump(url) {
+      var article_id = url.split('/').slice(-1)
+      this.$router.push({ path: '/article/'+article_id })
     }
   }
 }
