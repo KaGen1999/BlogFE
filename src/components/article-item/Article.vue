@@ -21,8 +21,12 @@
       :scrollStyle="true"
       :ishljs="true"
     />
+    <div class="tag">
+      <span class="iconfont icon-tag-subscript"></span>
+      <span class="iconfont">{{ article.tags }}</span>
+    </div>
     <div class="statement">
-      <div class="statement-tips">
+      <div class="statement-tips" v-if="article.statement_option">
         <span>本作品原创，遵循</span>
         <a
           target="_blank"
@@ -209,6 +213,14 @@ export default {
 .v-note-wrapper {
   border: 0px !important;
 }
+.tag{
+  padding: 0 0 2% 0;
+  text-align: left;
+}
+.tag .iconfont{
+  font-size: 0.8rem !important;
+  color: rgb(184, 184, 184);
+}
 .reward {
   font-size: 0.5rem;
   padding: 10px 15px 10px 15px !important;
@@ -226,12 +238,12 @@ export default {
   padding-left: 16px;
 }
 
-.statement{
-  font-size: .1rem;
+.statement {
+  font-size: 0.1rem;
   margin: 2vh 0 2vh 0;
   color: rgb(190, 190, 190) !important;
 }
-.statement a{
+.statement a {
   color: rgb(190, 190, 190) !important;
 }
 
@@ -245,5 +257,9 @@ export default {
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+.el-image-viewer__img {
+  max-height: 50% !important;
+  max-width: 50% !important;
 }
 </style>

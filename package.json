@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "element-ui": "^2.14.1",
+    "element-ui": "^2.15.6",
     "mavon-editor": "^2.9.1",
     "qrcode": "^1.4.4",
     "vue": "^2.5.2",
