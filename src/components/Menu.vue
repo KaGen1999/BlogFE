@@ -88,7 +88,6 @@ import '@/icon/iconfont.css'
 <style>
 .menu{
   width: calc(100% * 1 / 6.001);
-  padding: -15px;
 }
 @media screen and (max-width: 650px) {
   .menu{

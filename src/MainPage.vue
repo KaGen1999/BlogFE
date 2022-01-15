@@ -37,6 +37,7 @@ export default {
 
 .grid {
   margin-top: 50px;
+  margin-left: 15px;
   margin-right: 15px;
   border-radius: 10px;
 }
